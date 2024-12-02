@@ -471,6 +471,7 @@ ul{
 
     .boxed {
         padding: 30px; /* Réduction du padding global */
+
     }
 
     h2 {
@@ -486,60 +487,97 @@ ul{
 /*--------------------------SKILLS-----------------------*/
 /* Section Compétences */
 #competences {
-    padding: 80px 20px;
-    
-    margin-bottom: 0; /* Suppression des marges indésirables sous la section */
-    padding-left: 250px; /* Ajustez en fonction de la largeur de votre header */
+    padding: 80px 20px; /* Espacement interne */
+    margin-left: 250px; /* Gère l'espace pour un header vertical */
+    box-sizing: border-box; /* Inclut les marges et bordures dans la taille */
+    overflow-x: hidden; /* Empêche les débordements horizontaux */
+    transition: margin-left 0.3s ease; /* Transition douce */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Conteneur principal */
-.boxed {
+@keyframes slideIn {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Boîte des compétences */
+.boxed-skills {
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centre la boîte horizontalement */
     padding: 40px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 20px;
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte blanc */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre douce */
+    border: 5px solid #fff; /* Bordure blanche */
+    text-align: center; /* Centre le texte */
     position: relative;
-    text-align: center;
-    overflow: hidden; /* Pour éviter que les éléments ne débordent */
-    width: calc(100% - 220px); /* Réduit la largeur pour prendre en compte le header */
+    animation: slideIn 1s ease-out; /* Apparition avec glissement */
 }
 
-/* Titre */
-h2 {
-    font-size: 2.5rem;
-    color: #fff;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-/* Conteneur de compétences (flexbox) */
+/* Conteneur des compétences */
 .skills-container {
     display: flex;
-    justify-content: flex-start; /* Aligne les compétences à gauche */
+    justify-content: center; /* Centre les compétences horizontalement */
     gap: 15px; /* Espacement entre les compétences */
-    flex-wrap: nowrap; /* Empêche la réorganisation en plusieurs lignes */
-    overflow-x: auto; /* Permet de défiler horizontalement si nécessaire */
-    padding-bottom: 20px; /* Ajout d'un petit padding pour les petits écrans */
+    flex-wrap: nowrap; /* Les compétences restent sur une seule ligne */
+    overflow-x: auto; /* Permet le défilement horizontal sur petits écrans */
+    padding-bottom: 20px; /* Ajout d'espace sous les compétences */
+    animation: fadeIn 1.2s ease-out; /* Apparition avec fondu */
 }
 
 /* Compétence individuelle */
 .skill {
-    flex: 1 0 20%; /* Répartition flexible de la largeur (20% de la largeur disponible) */
-    max-width: 120px; /* Limite la largeur d'une compétence */
+    flex: 0 0 auto; /* Fixe la taille des compétences */
+    max-width: 120px; /* Largeur maximale */
     text-align: center;
     padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure légère */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    background: none; /* Suppression du fond gris */
-}
+    background: none;
+    opacity: 0; /* Initialement invisible */
+    animation: fadeIn 0.8s ease-out forwards;
 
-/* Effet au survol sur une compétence */
+}
+.skill:nth-child(1) {
+    animation-delay: 0.2s; /* Décalage pour effet d'apparition */
+}
+.skill:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.skill:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.skill:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.skill:nth-child(5) {
+    animation-delay: 1s;
+}
+.skill:nth-child(6) {
+    animation-delay: 1.2s;
+}
 .skill:hover {
-    transform: translateY(-10px) scale(1.05); /* Agrandissement et élévation */
+    transform: scale(1.1) rotate(-2deg); /* Agrandissement et rotation légère */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2); /* Lumière douce */
 }
 
 /* Image de la compétence */
@@ -548,41 +586,47 @@ h2 {
     height: 80px;
     margin-bottom: 10px;
     border-radius: 50%;
-    object-fit: contain;
     background: #1e1e1e;
     padding: 5px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
+/* Effet au survol sur l'image */
+.skill:hover img {
+    transform: rotate(360deg); /* Rotation complète */
+}
+    
 
 /* Titre de la compétence */
 .skill h3 {
     font-size: 1rem;
     color: #fff;
+    transition: color 0.3s ease;
+}
+.skill:hover h3 {
+    color: #00bcd4; /* Bleu clair */
 }
 
 /* Mise en page mobile */
 @media screen and (max-width: 768px) {
-    /* Conteneur des compétences */
+    #competences {
+        margin-left: 0; /* Supprime la marge gauche pour les petits écrans */
+        padding: 60px 10px; /* Réduction du padding */
+    }
+
+    .boxed-skills {
+        padding: 30px; /* Réduction de l'espace interne */
+    }
+
     .skills-container {
-        flex-direction: row; /* Les compétences restent sur la même ligne */
-        gap: 10px; /* Réduit l'écart entre les compétences */
-        padding: 20px; /* Ajoute du padding pour éviter que les compétences soient collées aux bords */
-        overflow-x: scroll; /* Permet le défilement horizontal */
+        justify-content: start; /* Aligne les compétences au début pour faciliter le défilement */
     }
 
-    /* Compétence individuelle */
-    .skill {
-        flex: 0 0 auto; /* Fixe la taille des compétences */
-        max-width: 120px; /* Assure que les compétences ne soient pas trop larges */
-        margin-bottom: 20px; /* Espacement entre les compétences */
-    }
-
-    /* Taille de l'image sur mobile */
     .skill img {
         width: 60px;
         height: 60px;
     }
 
-    /* Réduction de la taille de la police pour les titres sur mobile */
     .skill h3 {
         font-size: 0.9rem;
     }
@@ -590,8 +634,8 @@ h2 {
 
 /* Mise en page pour très petits écrans */
 @media screen and (max-width: 480px) {
-    .skill {
-        max-width: 120px; /* Assure une largeur optimale pour très petits écrans */
+    .boxed-skills {
+        padding: 20px;
     }
 
     .skill img {
@@ -603,6 +647,7 @@ h2 {
         font-size: 0.8rem;
     }
 }
+
 /*---------------------------PROJETs---------------------------------*/
 /* Section Projets */
 #projets {
@@ -619,9 +664,11 @@ h2 {
     display: flex;
     justify-content: space-between; /* Aligner le contenu à gauche */
     gap: 30px; /* Espacement entre chaque projet */
+    max-width: 1280px;
     width: 100%; /* Prend toute la largeur du conteneur parent */
     box-sizing: border-box;
     margin-bottom: 30px; /* Ajoute de l'espace en bas entre chaque projet */
+   
 }
 
 /* Chaque projet occupe toute la largeur de la box */
@@ -698,6 +745,13 @@ h2 {
     .flex {
         flex-direction: column; /* Empile les éléments verticalement */
         align-items: center; /* Centre les éléments */
+    }
+    .boxed {
+        flex-direction: column; /* Empile les sections verticalement */
+        align-items: center;
+        width: 80%;
+        margin-bottom: 20px;
+        padding: 30px;
     }
 
     .projet-item {
