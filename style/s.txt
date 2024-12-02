@@ -1,0 +1,67 @@
+.logo, .name, .social-icon {
+        display: none;  /* Cacher ces éléments */
+    }
+
+    /* Cacher le fond du header */
+    header {
+        background: none; /* Enlever le fond du header */
+        box-shadow: none;  /* Cacher l'ombre de la barre de navigation */
+        display: block;
+        padding:10px 20px;
+        width:100%;
+        flex-direction: column;
+        align-items: center;
+        
+
+    }
+    main {
+        margin-left: 0; /* Supprime la marge pour les petits écrans */
+        padding-top: 100px;
+    }
+    section {
+        width: 90%; /* Réduire la largeur des sections sur tablette */
+        max-width: 900px;
+    }
+    .hamburger {
+        display: block; /* Afficher le menu hamburger */
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        
+        
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: radial-gradient(circle,#3a1c71, #000,  #8e44ad);
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+        
+    }
+
+    .nav-links.active {
+        display: block; /* Afficher le menu lorsque activé */
+    }
+
+    .nav-links li a {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+    
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+}
