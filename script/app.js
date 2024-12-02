@@ -61,3 +61,6 @@ document.getElementById("envoyer").addEventListener("click", (event) => {
     // Appel de la méthode presentation() pour afficher les informations
     client.presentation();
 });
+
+
+

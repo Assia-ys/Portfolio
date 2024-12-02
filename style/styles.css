@@ -13,7 +13,6 @@ html {
 
 
 body {
-
     background-color: #000;    
     margin: 0;
     font-family:  sans-serif;
@@ -37,7 +36,31 @@ header {
     color: white;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    
 }
+main {
+    margin-left: 250px; /* Décale le contenu à droite du header */
+    padding-top: 20px; /* Crée un espace en haut de main (au-dessous du header) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacement entre les sections */
+   
+}
+section {
+    width: 90%; /* Largeur des sections */
+    max-width: 1200px; /* Limite la largeur maximale des sections */
+    padding: 20px;
+    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+
+
+
+
 .logo img {
     width: 120px; /* Fixe la largeur du logo */
     height: auto;
@@ -108,7 +131,7 @@ header {
 }
 
 /* Masquer le menu sur mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width:  1024px) {
     .logo, .name, .social-icon {
         display: none;  /* Cacher ces éléments */
     }
@@ -119,8 +142,14 @@ header {
         box-shadow: none;  /* Cacher l'ombre de la barre de navigation */
         display: block;
     }
-    
-
+    main {
+        margin-left: 0; /* Supprime la marge pour les petits écrans */
+        padding-top: 100px;
+    }
+    section {
+        width: 90%; /* Réduire la largeur des sections sur tablette */
+        max-width: 900px;
+    }
     .hamburger {
         display: block; /* Afficher le menu hamburger */
         position: fixed;
@@ -132,7 +161,7 @@ header {
     .nav-links {
         display: none;
         flex-direction: column;
-        background: #5900b3;
+        background: radial-gradient(circle,#3a1c71, #000,  #8e44ad);
         width: 250px;
         position: fixed;
         top: 0;
@@ -176,6 +205,18 @@ header {
     .social-icons a {
         font-size: 1.2rem; /* Réduire la taille des icônes sociales */
     }
+    header {
+        padding: 10px;
+    }
+
+    main {
+        padding-top: 70px; /* Ajuster l'espace entre header et contenu */
+    }
+
+    section {
+        width: 95%;
+        max-width: 600px;
+    }
 }
 
 
@@ -210,6 +251,7 @@ header {
     margin: 10px 0;
     text-decoration: none;
     display: block;
+    width: 100%;
 }
 .full-name{
     font-size: 4rem;
@@ -226,6 +268,8 @@ header {
 }
 
 .btn-primary, .btn-secondary {
+    position: relative;
+    z-index: 10;
     display: inline-block;
     padding: 10px 20px;
     font-size: 1rem;
@@ -312,6 +356,7 @@ header {
         padding: 8px 15px;
     }
 }
+
 
 /*-------------------a propos ------------------------------------------------------------------*/
 /* Section À propos */
@@ -461,6 +506,16 @@ ul{
     p {
         font-size: 1rem; /* Texte légèrement plus petit */
     }
+    cta-buttons {
+        margin-top: 20px;
+        text-align: center; /* Centrer les boutons */
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 1.1rem; /* Augmenter la taille des boutons */
+        padding: 12px 25px; /* Agrandir les boutons pour plus de confort */
+        margin: 10px; /* Ajouter plus d'espace entre les boutons */
+    }
 }
 
 /* Mise en page pour très petits écrans */
@@ -480,6 +535,13 @@ ul{
 
     p {
         font-size: 0.9rem;
+    }
+    .btn-primary, .btn-secondary {
+        font-size: 1rem; /* Augmenter légèrement la taille des boutons */
+        padding: 10px 20px; /* Ajuster la taille du padding */
+        margin: 10px; /* Espacement suffisant entre les boutons */
+        width: 80%; /* Rendre les boutons plus larges pour plus de clarté */
+        box-sizing: border-box;
     }
 }
 
@@ -711,7 +773,7 @@ ul{
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color:#003d7a;
+    color:#6600cc;
 }
 
 /* Description du projet */
@@ -734,6 +796,44 @@ ul{
 .projet-item .btn:hover {
     background-color: #aa1fe665;
 }
+/* Mise en page pour PC et tablettes de taille moyenne */
+@media screen and (max-width: 1024px) {
+    #contact {
+        margin-left: 0; /* Supprimer la marge gauche */
+        padding: 60px 20px; /* Ajuste le padding sur les écrans moyens */
+    }
+
+    .contact-box {
+        flex-direction: column; /* Empile les sections verticalement */
+        align-items: center;
+        width: 90%;
+        margin-bottom: 20px;
+        padding: 30px;
+        margin-left: 0; /* Evite le décalage de la boîte */
+    }
+
+    .contact-details,
+    .contact-message {
+        width: 100%; /* Utilise toute la largeur pour chaque section */
+        text-align: center;
+        padding: 0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem; /* Ajuste la taille du texte pour plus de lisibilité */
+    }
+
+    .contact-form button {
+        font-size: 1.1rem; /* Taille du bouton ajustée */
+    }
+
+    .social-icons {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
 
 /* Responsive : Tablettes et petits écrans */
 @media screen and (max-width: 768px) {
@@ -954,7 +1054,7 @@ ul{
 footer {
     background-color: #000;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px 60px;
     font-size: 0.9rem;
     text-align: center; /* Centre le texte dans le footer */
    
@@ -963,6 +1063,7 @@ footer {
     left: 0;            /* Assure qu'il s'étend sur toute la largeur */
     z-index: 999;       /* Assure que le footer soit au-dessus des autres éléments */
     border: 5px solid #fff;
+    overflow: hidden;
 
 
     
