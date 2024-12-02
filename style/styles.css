@@ -22,20 +22,21 @@ body {
 
 /* Style général pour le header */
 header {
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 20px;
     position: fixed;
-    top: 0;
+    top: 60;
     left: 0;
     height: 100vh;
     width: 250px;
     background: radial-gradient(circle,#3a1c71, #000,  #8e44ad);
     color: white;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    
+   
     
 }
 main {
@@ -55,11 +56,6 @@ section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-
-
-
-
-
 
 .logo img {
     width: 120px; /* Fixe la largeur du logo */
@@ -118,6 +114,7 @@ section {
 .hamburger{
     display: none;
     cursor: pointer;
+    background: none;
 }
 .bar{
     display:block;
@@ -141,6 +138,14 @@ section {
         background: none; /* Enlever le fond du header */
         box-shadow: none;  /* Cacher l'ombre de la barre de navigation */
         display: block;
+        padding:10px 20px;
+        width:100%;
+        flex-direction: column;
+        align-items: center;
+       
+        
+        
+
     }
     main {
         margin-left: 0; /* Supprime la marge pour les petits écrans */
@@ -153,9 +158,11 @@ section {
     .hamburger {
         display: block; /* Afficher le menu hamburger */
         position: fixed;
-        top: 20px;
+        top: 10px;
         left: 20px;
         z-index: 1001;
+        
+        
     }
 
     .nav-links {
@@ -167,7 +174,7 @@ section {
         top: 0;
         left: 0;
         padding-top: 60px;
-        z-index: 1000;
+        
     }
 
     .nav-links.active {
@@ -206,6 +213,7 @@ section {
         font-size: 1.2rem; /* Réduire la taille des icônes sociales */
     }
     header {
+        
         padding: 10px;
     }
 
@@ -234,12 +242,11 @@ section {
 #accueil {
     padding: 80px 20px;
     margin-left: 250px;
-    /*background: linear-gradient(135deg, #003366, #007bff);*/
-    
     color: #fff;
-    z-index: 1;
+    /*z-index: 1;*/
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow:visible;
+    position: relative;
     text-align: center;
     transition: margin-left 0.3s ease;
 }
@@ -252,6 +259,10 @@ section {
     text-decoration: none;
     display: block;
     width: 100%;
+    pointer-events: auto;
+    padding: 10px; /* Zone cliquable plus grande */
+    display: block; /* Facile à cliquer */
+    text-align: center;
 }
 .full-name{
     font-size: 4rem;
@@ -263,20 +274,32 @@ section {
 }
 
 /* Boutons CTA */
-.cta-buttons {
+.cta-buttons a {
+    display: inline-block;
+    padding:15px 25px;
+    margin:10px auto;
+    width: auto;
+
     margin-top: 20px;
+    overflow: visible; /* Laisse le contenu visible */
+    position: relative; /* Assure la bonne gestion du positionnement */
+    pointer-events: auto; /* Active les clics sur les enfants */
+    opacity: 1; /* Reste visible */
 }
 
 .btn-primary, .btn-secondary {
+    width:80%;
     position: relative;
-    z-index: 10;
+    /*z-index: 1000;*/
     display: inline-block;
+    visibility: visible;
     padding: 10px 20px;
     font-size: 1rem;
     text-decoration: none;
     color: #fff;
     border-radius: 25px;
-    margin: 5px;
+    margin: 10px auto;
+    pointer-events: auto;
     transition: background-color 0.3s ease;
 }
 
@@ -336,6 +359,11 @@ section {
         width: 70%;
         margin-bottom: 20px;
     }
+    .cta-buttons a{
+        width:90%;
+        padding:12px;
+        font-size:0.9rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -365,10 +393,10 @@ section {
    
     margin-left: 250px; /* Espace pour le header vertical */
     transition: margin-left 0.3s ease; /* Transition douce lors de l'ouverture/fermeture du menu */
-    z-index: 1; /* Assure que le contenu reste au-dessus */
+    /*z-index: 1;*/ /* Assure que le contenu reste au-dessus */
     box-sizing: border-box; /* Évite les débordements */
-    overflow-x: hidden; /* Supprime les débordements horizontaux */
-    
+    overflow:visible ; /* Supprime les débordements horizontaux */
+    position: relative;
 }
 
 /* Conteneur principal */
@@ -397,7 +425,7 @@ section {
     background: linear-gradient(90deg, rgba(0, 123, 255, 0.7), rgba(255, 255, 255, 0.7));
     border-radius: 10px;
     transition: width 0.3s ease;
-    z-index: -1;
+   /* z-index: 1;*/
 }
 
 .boxed:hover {
@@ -443,7 +471,7 @@ h3 {
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 10px;
-    color:#003366;
+    color:#6600cc;
 }
 ul{
     font-size: 1.4rem;
@@ -506,16 +534,7 @@ ul{
     p {
         font-size: 1rem; /* Texte légèrement plus petit */
     }
-    cta-buttons {
-        margin-top: 20px;
-        text-align: center; /* Centrer les boutons */
-    }
-
-    .btn-primary, .btn-secondary {
-        font-size: 1.1rem; /* Augmenter la taille des boutons */
-        padding: 12px 25px; /* Agrandir les boutons pour plus de confort */
-        margin: 10px; /* Ajouter plus d'espace entre les boutons */
-    }
+    
 }
 
 /* Mise en page pour très petits écrans */
@@ -536,13 +555,7 @@ ul{
     p {
         font-size: 0.9rem;
     }
-    .btn-primary, .btn-secondary {
-        font-size: 1rem; /* Augmenter légèrement la taille des boutons */
-        padding: 10px 20px; /* Ajuster la taille du padding */
-        margin: 10px; /* Espacement suffisant entre les boutons */
-        width: 80%; /* Rendre les boutons plus larges pour plus de clarté */
-        box-sizing: border-box;
-    }
+    
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -716,9 +729,10 @@ ul{
     padding: 80px 20px; /* Espacement autour du contenu */
     margin-left: 250px; /* Espace pour le header vertical */
     transition: margin-left 0.3s ease; /* Transition douce pour la marge */
-    z-index: 1; /* Assure que le contenu reste au-dessus */
+    /*z-index: 1; /* Assure que le contenu reste au-dessus */
     box-sizing: border-box; /* Empêche les débordements */
-    overflow-x: hidden; /* Supprime tout débordement horizontal */
+    overflow:visible; 
+    position: relative;
 }
 
 /* Disposition flexible pour les projets */
@@ -817,6 +831,11 @@ ul{
         width: 100%; /* Utilise toute la largeur pour chaque section */
         text-align: center;
         padding: 0;
+        pointer-events: auto; /* Assurez-vous que les champs de saisie peuvent recevoir des clics */
+        visibility: visible; /* Assurez-vous qu'ils sont visibles */
+        opacity: 1;
+        position: relative; /* Pour que z-index fonctionne */
+        /*z-index: 10;*/
     }
 
     .contact-form input,
@@ -905,9 +924,9 @@ ul{
     padding: 80px 20px;
     margin-left: 250px;
     transition: margin-left 0.3s ease;
-    z-index: 1;
+    /*z-index: 1;*/
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow:visible;
     display: flex;
     justify-content: center;
 }
@@ -952,6 +971,7 @@ ul{
     border-radius: 8px;
     background: #000;
     color: #fff;
+    box-sizing: border-box;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.7);
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -976,6 +996,7 @@ ul{
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
     box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
+    /*z-index: 10;*/
 }
 
 .contact-form button:hover {
@@ -989,6 +1010,7 @@ ul{
     display: flex;
     gap: 15px;
     justify-content: center;
+    position: relative;
 }
 
 .social-icons a {
@@ -1061,9 +1083,9 @@ footer {
     bottom: 0;          /* Place le footer au bas */
     width: 100%;        /* Prend toute la largeur de la page */
     left: 0;            /* Assure qu'il s'étend sur toute la largeur */
-    z-index: 999;       /* Assure que le footer soit au-dessus des autres éléments */
+    /*z-index: 999;       /* Assure que le footer soit au-dessus des autres éléments */
     border: 5px solid #fff;
-    overflow: hidden;
+    overflow: visible;
 
 
     
