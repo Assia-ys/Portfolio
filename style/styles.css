@@ -118,7 +118,7 @@ section {
 
 .nav-links li a {
     text-decoration: none;
-    color: #fff;
+    color: #6600cc;
     font-size: 1.2rem;
     padding: 10px;
     display: block;
@@ -127,7 +127,7 @@ section {
 }
 
 .nav-links li a:hover {
-    background: #6600cc;
+    background: #640893;
     border-radius: 5px;
 }
 .hamburger{
@@ -1064,7 +1064,7 @@ ul{
 }
 
 .social-icons a {
-    color: #fff;
+    color: #6600cc;
     font-size: 2rem;
     transition: transform 0.3s ease, color 0.3s ease;
 }
