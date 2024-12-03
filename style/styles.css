@@ -16,6 +16,9 @@ body {
     font-family:  sans-serif;
     color:#000;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+    
+   
 }
 
 /* Style général pour le header */
@@ -42,6 +45,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 20px; /* Espacement entre les sections */
+    overflow: hidden;
    
 }
 section {
@@ -85,6 +89,7 @@ section {
     font-size: 1.5rem;
     font-weight: bold;
     color: #6600cc;
+  
 }
 
 /* Icônes sociales */
@@ -118,7 +123,7 @@ section {
 
 .nav-links li a {
     text-decoration: none;
-    color: #fff;
+    color: #6600cc;
     font-size: 1.2rem;
     padding: 10px;
     display: block;
@@ -127,7 +132,7 @@ section {
 }
 
 .nav-links li a:hover {
-    background: #6600cc;
+    background: #640893;
     border-radius: 5px;
 }
 .hamburger{
@@ -145,7 +150,7 @@ section {
     margin:5px;
     -webkit-transition: all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
-    background-color: #3a1c71;
+    background-color: #fff;
 
 }
 
@@ -206,8 +211,7 @@ section {
         left: 20px;
         z-index: 1001;
         pointer-events: auto;
-        
-        
+       
     }
 
     .nav-links {
@@ -1066,7 +1070,7 @@ ul{
 .social-icons a {
     color: #6600cc;
     font-size: 2rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 .social-icons a:hover {
@@ -1135,10 +1139,7 @@ footer {
     left: 0;            /* Assure qu'il s'étend sur toute la largeur */
     /*z-index: 999;       /* Assure que le footer soit au-dessus des autres éléments */
     border: 5px solid #fff;
-    overflow: visible;
-
-
-    
+    overflow: hidden;
 }
 
 /* Style pour les informations légales */
