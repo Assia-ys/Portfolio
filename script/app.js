@@ -35,7 +35,7 @@ class Client {
 
     // Méthode pour afficher les informations du client
     presentation() {
-        alert(`Bonjour, je suis ${this.nom}, vous pouvez me contacter sur ${this.email}. Votre message est : ${this.message}.`);
+        alert(`Bonjour, je suis ${this.nom}, vous pouvez me contacter sur ${this.email}. mon message est : ${this.message}.`);
     }
 }
 
@@ -66,11 +66,20 @@ document.getElementById("envoyer").addEventListener("click", (event) => {
 function toggleBackground() {
     const body = document.body;
     const button = document.querySelector('.toggle-btn');
+    const sections = document.querySelectorAll('.section');
 
     // Vérifie la couleur actuelle et la bascule
     if (body.style.backgroundColor === 'black') {
-        body.style.backgroundColor = 'white';
+
+        body.style.backgroundColor = '#402b47';
         body.style.color = 'black';
+
+
+        sections.forEach(section => {
+            section.style.backgroundColor = '#400443'; // Arrière-plan clair
+            section.style.color = 'black'; // Texte noir
+            section.style.border = '1px solid #ddd'; // Bordure claire
+        });
         button.textContent = 'Dark Mode';
         button.classList.remove('dark-mode');
         button.classList.add('light-mode');
@@ -80,5 +89,12 @@ function toggleBackground() {
         button.textContent = 'Light Mode';
         button.classList.remove('light-mode');
         button.classList.add('dark-mode');
+
+        sections.forEach(section => {
+            section.style.backgroundColor = 'black'; // Arrière-plan sombre
+            section.style.color = 'white'; // Texte blanc
+            section.style.border = '1px solid #555'; // Bordure sombre
+        });
+
     }
 }
