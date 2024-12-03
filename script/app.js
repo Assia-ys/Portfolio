@@ -62,5 +62,23 @@ document.getElementById("envoyer").addEventListener("click", (event) => {
     client.presentation();
 });
 
+//bouton dark
+function toggleBackground() {
+    const body = document.body;
+    const button = document.querySelector('.toggle-btn');
 
-
+    // Vérifie la couleur actuelle et la bascule
+    if (body.style.backgroundColor === 'black') {
+        body.style.backgroundColor = 'white';
+        body.style.color = 'black';
+        button.textContent = 'Dark Mode';
+        button.classList.remove('dark-mode');
+        button.classList.add('light-mode');
+    } else {
+        body.style.backgroundColor = 'black';
+        body.style.color = 'white';
+        button.textContent = 'Light Mode';
+        button.classList.remove('light-mode');
+        button.classList.add('dark-mode');
+    }
+}
