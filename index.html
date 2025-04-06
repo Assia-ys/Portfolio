@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assia-YOUNSI</title>
-   
     <link rel="stylesheet" href="style/styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
-
 </head>
 
 <body>
@@ -56,7 +53,7 @@
     </header>
     
     <main>
-    <!-- *********************************-->
+    <!-- *******************************Accueil****************************************************-->
     <section id="accueil" class="section">
         <div class="boxed text-center accueil-box">
             <div class="flex">
@@ -66,8 +63,6 @@
                     <p class="job-title">Développeuse Informatique</p>
                     <p class="tagline">"Passionnée par l'informatique, je travaille avec des technologies comme HTML, CSS, JavaScript, Python, Java, C, et Bash. Curieuse et créative, je suis toujours prête à relever de nouveaux défis avec rigueur et innovation."</p>
                     
-                   
-    
                     <!-- Bouton d'appel à l'action -->
                     <div class="cta-buttons">
                         <a href="#projets" class="btn-primary" aria-label="voir mes projets">Voir mes projets</a>
@@ -97,7 +92,11 @@
                 <!-- Partie gauche avec texte, bouton, et citation -->
                 <div class="w50 text-left">
                     <h2>Hello !</h2>
-                    <p>"Je suis passionnée par le développement et l’innovation numérique. Je m'intéresse particulièrement au développement web avec HTML, CSS et JavaScript, et je résous des problèmes en utilisant Python et C. J'explore également la programmation orientée objet avec Java, la résolution de scripts avec Bash, et la programmation fonctionnelle avec OCaml.Animée par la curiosité et le détail, je suis toujours prête à relever de nouveaux défis et à apprendre de nouvelles technologies pour concevoir des projets alliant efficacité et créativité.</p>
+                    <p>"Je suis passionnée par le développement et l’innovation numérique. Je m'intéresse particulièrement au développement web avec HTML, CSS et JavaScript, tout en maîtrisant la gestion de bases de données avec SQL. J’utilise PHP couplé au moteur de templates Smarty pour créer des applications web dynamiques et structurées.
+
+                        Je résous également des problèmes en utilisant Python et C, en explorant à la fois la logique algorithmique et les performances. Je m'intéresse à la programmation orientée objet avec Java, aux scripts d'automatisation avec Bash, ainsi qu’à la programmation fonctionnelle avec OCaml.
+                        
+                        Animée par la curiosité et le souci du détail, je suis toujours prête à relever de nouveaux défis et à apprendre de nouvelles technologies pour concevoir des projets alliant efficacité, robustesse et créativité.</p>
                         
                         <p>🌟 'Apprendre, coder et résoudre, une ligne de code à la fois.'</p>
                     <!-- Box avec citation -->
@@ -121,6 +120,37 @@
                         <li>Dessin</li><br>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!--***************************Experiences****************************-->
+    <section id="projets" class="section">
+        <div class="boxed">
+            <h2 class="text-center">Expériences Professionnelles</h2>
+    
+            <!-- Projet 1 -->
+            <div class="flex projet-item" onclick="toggleLight(this)">
+                <div class="w60 projet-details">
+                    <div class="projet-content">
+                        <h3>DÉVELOPPEUSE INFORMATIQUE ET DIGITALISATION - STAGE</h3>
+                        <p><strong>LUXIUM SOLUTIONS (EX-SAINT GOBAIN)</strong> <a href="https://luxiumsolutions.com/" target="_blank" rel="noopener noreferrer"></a>,NEMOURS, PARIS </p>
+            <p><strong>Période :</strong> 03/2025 – 09/2025</p>
+                        <ul>
+                            <li>Implémentation de requêtes SQL et optimisation des flux de données entre les différentes tables</li>
+                            <li>Développement d'interfaces dynamiques avec JavaScript, PHP, MySQL et le framework Symfony structuré en programmation orientée objet et l'écriture des scripts backend</li>
+                            <li>Digitalisation des processus métiers internes en développant des applications web</li>
+                            <li>Collaboration avec gestion du versioning (Git)</li>
+                            <li>Réorganisation de la structure de la base de donnée</li>
+                            <li>Rédaction de la documentation technique et utilisateur des modules développés</li>
+                        </ul>
+                        <p><strong>Environnement technique :</strong> PHP, SQL, Smarty, Symfony,HTML, CSS, JavaScript, Bootstrap </p>
+                        
+                    </div>
+                </div>
+                <div class="w40 projet-image">
+                    <img src="images/luxium.png" alt="exp 1">
+                </div>
+                
             </div>
         </div>
     </section>
@@ -175,6 +205,12 @@
                 <div class="skill">
                     <img src="images/mysql.png" alt="MySQL">
                     <h3>MySQL</h3>
+                </div>
+
+                <!-- Compétence 9 -->
+                <div class="skill">
+                    <img src="images/php.png" alt="MySQL">
+                    <h3>PHP</h3>
                 </div>
                 
                 <!-- Compétence 9 -->
@@ -255,9 +291,6 @@
             </div>
         </div>
     </section>
-    
-
-    <!-- *************************************************************************-->
     
     <!-- *********************************Formulaire*************************-->
     <section id="contact" class="section">

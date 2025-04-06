@@ -38,6 +38,7 @@ header {
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
    
 }
+/*le main il contient toute les section:accueil , a propos, competance, projet, contact*/
 main {
     margin-left: 250px; /* Décale le contenu à droite du header */
     padding-top: 20px; /* Crée un espace en haut de main (au-dessous du header) */
@@ -103,10 +104,6 @@ section {
     color: #6600cc;
     font-size: 1.5rem;
 }
-
-
-
-
 /* Menu de navigation */
 .nav-links {
     display: flex;
@@ -115,22 +112,18 @@ section {
     margin-top: 40px;
     z-index: 1001;
 }
-
 .nav-links ul {
     list-style: none;
     padding: 0;
 }
-
 .nav-links li a {
     text-decoration: none;
     color: #6600cc;
     font-size: 1.2rem;
     padding: 10px;
     display: block;
-    transition: background 0.3s;
-    
+    transition: background 0.3s;  
 }
-
 .nav-links li a:hover {
     background: #640893;
     border-radius: 5px;
@@ -141,7 +134,6 @@ section {
     background: none;
     pointer-events: auto;
     z-index: 1001;
-    
 }
 .bar{
     display:block;
@@ -151,9 +143,7 @@ section {
     -webkit-transition: all 0.3s ease-in-out;
     transition:all 0.3s ease-in-out;
     background-color: #fff;
-
 }
-
 /* Masquer le menu sur mobile */
 @media screen and (max-width:  1024px) {
     .name, .social-icons {
@@ -177,13 +167,7 @@ section {
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease, color 0.3s ease;
-        
-
     }
-    
-   
-
-
     /* Cacher le fond du header */
     header {
         background: none; /* Enlever le fond du header */
@@ -211,9 +195,7 @@ section {
         left: 20px;
         z-index: 1001;
         pointer-events: auto;
-       
     }
-
     .nav-links {
         display: none;
         flex-direction: column;
@@ -223,19 +205,14 @@ section {
         top: 0;
         left: 0;
         padding-top: 60px;
-        
-        
     }
-
     .nav-links.active {
         display: block; /* Afficher le menu lorsque activé */
     }
-
     .nav-links li a {
         font-size: 1.5rem;
         padding: 15px;
     }
-    
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
 
@@ -247,60 +224,42 @@ section {
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
-    
 }
 /* Pour les écrans très petits */
 @media screen and (max-width: 480px) {
     .logo img {
         width: 100px; /* Réduire la taille du logo pour les très petits écrans */
     }
-
     .name h3 {
         font-size: 1.2rem;
     }
-
     .social-icons a {
         font-size: 1.2rem; /* Réduire la taille des icônes sociales */
     }
     header {
-        
         padding: 10px;
     }
-
     main {
         padding-top: 70px; /* Ajuster l'espace entre header et contenu */
     }
-
     section {
         width: 95%;
         max-width: 600px;
     }
 }
 
-
-
-/*--------------------------------------------------------*/
-
-/*------------------------------------------------------------*/
-
-
-
-
-
-/*------------------------Accueil------------------------------------*/
+/*------------------------Accueil---------------------------------------------------------------------------*/
 /* Section Accueil */
 #accueil {
     padding: 80px 20px;
     margin-left: 250px;
     color: #fff;
-    /*z-index: 1;*/
     box-sizing: border-box;
     overflow:visible;
     position: relative;
     text-align: center;
     transition: margin-left 0.3s ease;
 }
-
 /* Contact info */
 .contact-info p, .contact-info a {
     color: #fff;
@@ -312,8 +271,7 @@ section {
     pointer-events: auto;
     padding: 10px; /* Zone cliquable plus grande */
     display: block; /* Facile à cliquer */
-    text-align: center;
-    
+    text-align: center; 
 }
 .full-name{
     font-size: 4rem;
@@ -323,25 +281,21 @@ section {
     font-size: 1.8rem;
 
 }
-
 /* Boutons CTA */
 .cta-buttons a {
     display: inline-block;
     padding:15px 25px;
     margin:10px auto;
     width: auto;
-
     margin-top: 20px;
     overflow: visible; /* Laisse le contenu visible */
     position: relative; /* Assure la bonne gestion du positionnement */
     pointer-events: auto; /* Active les clics sur les enfants */
     opacity: 1; /* Reste visible */
 }
-
 .btn-primary, .btn-secondary {
     width:80%;
     position: relative;
-    /*z-index: 1000;*/
     display: inline-block;
     visibility: visible;
     padding: 10px 20px;
@@ -353,26 +307,21 @@ section {
     pointer-events: auto;
     transition: background-color 0.3s ease;
 }
-
 .btn-primary {
     background-color: #1c1463;
     border: 2px solid #fff;
 }
-
 .btn-primary:hover {
     background-color: #aa1fe665;
 }
-
 .btn-secondary {
     background-color: #1c1463;
     border: 2px solid #fff;
 }
-
 .btn-secondary:hover {
     background-color: #aa1fe665;
     
 }
-
 /* Tagline */
 .tagline {
     font-size: 1.2rem;
@@ -380,7 +329,6 @@ section {
     font-style: italic;
     color: #d1e7ff;
 }
-
 /* Photo de profil */
 .photo-profil {
     width: 50%;
@@ -389,23 +337,19 @@ section {
     border: 5px solid #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
 /* Responsivité */
 @media screen and (max-width: 768px) {
     #accueil {
         margin-left: 0;
         padding: 60px 20px;
     }
-
     .flex {
         flex-direction: column;
     }
-
     .w60, .w40 {
         width: 100%;
         text-align: center;
     }
-
     .photo-profil {
         width: 70%;
         margin-bottom: 20px;
@@ -416,40 +360,31 @@ section {
         font-size:0.9rem;
     }
 }
-
 @media screen and (max-width: 480px) {
     .photo-profil {
         width: 60%;
     }
-
     .full-name {
         font-size: 2.5rem;
     }
-
     .job-title, .tagline {
         font-size: 1rem;
     }
-
     .btn-primary, .btn-secondary {
         font-size: 0.9rem;
         padding: 8px 15px;
     }
 }
-
-
 /*-------------------a propos ------------------------------------------------------------------*/
 /* Section À propos */
 #apropos {
     padding: 80px 20px; /* Ajout de padding pour un espacement fluide */
-   
     margin-left: 250px; /* Espace pour le header vertical */
     transition: margin-left 0.3s ease; /* Transition douce lors de l'ouverture/fermeture du menu */
-    /*z-index: 1;*/ /* Assure que le contenu reste au-dessus */
     box-sizing: border-box; /* Évite les débordements */
     overflow:visible ; /* Supprime les débordements horizontaux */
     position: relative;
 }
-
 /* Conteneur principal */
 .boxed {
     max-width: 1280px;
@@ -463,7 +398,6 @@ section {
     transition: all 0.3s ease; /* Transition douce pour l'effet de lumière */
     border: 5px solid #fff;
 }
-
 /* Effet de lumière sous la boîte */
 .boxed:after {
     content: '';
@@ -476,18 +410,14 @@ section {
     background: linear-gradient(90deg, rgba(0, 123, 255, 0.7), rgba(255, 255, 255, 0.7));
     border-radius: 10px;
     transition: width 0.3s ease;
-   /* z-index: 1;*/
 }
-
 .boxed:hover {
     transform: translateY(-5px); /* Légère élévation au survol */
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
-
 .boxed.active:after {
     width: 100%; /* Lumière pleine largeur quand active */
 }
-
 /* Flexbox pour organiser les éléments */
 .flex {
     display: flex;
@@ -495,13 +425,11 @@ section {
     align-items: flex-start;
     gap: 30px; /* Espacement entre les colonnes */
 }
-
 /* Colonne gauche */
 .w50 {
     flex: 0 1 50%; /* Largeur flexible, max 50% */
     text-align: left;
 }
-
 /* Titres et texte */
 h2 {
     font-size: 2.5rem;
@@ -509,14 +437,12 @@ h2 {
     font-weight: 600;
     margin-bottom: 10px;
 }
-
 p {
     font-size: 1.2rem;
     color: #fff;
     line-height: 1.6;
     margin-bottom: 15px;
 }
-
 h3 {
     
     font-size: 1.6rem;
@@ -530,9 +456,6 @@ ul{
     
     
 }
-
-
-
 /* Boîte de citation */
 .quote-box {
     background-color: #003366; /* Bleu nuit */
@@ -540,80 +463,62 @@ ul{
     margin-top: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    
-    
 }
-
 .quote-box p {
     font-size: 1.5rem;
     color: #fff;
     text-align: center;
 }
-
 /* Mise en page mobile */
 @media screen and (max-width: 768px) {
     #apropos {
         margin-left: 0; /* Supprime la marge pour le header vertical */
         padding: 60px 10px; /* Ajuste le padding pour les petits écrans */
     }
-
     .flex {
         flex-direction: column; /* Empile les colonnes verticalement */
         align-items: center; /* Centre tous les éléments */
     }
-
     .w50 {
         width: 90%; /* Largeur réduite pour les colonnes */
         text-align: center; /* Recentrage du texte */
     }
-
     .quote-box {
         width: 90%; /* Largeur adaptée */
         margin: 20px auto; /* Centrage pour mobiles */
     }
-
     .download-btn {
         width: 100%; /* Bouton prend toute la largeur */
         text-align: center;
     }
-
     h2 {
         font-size: 2rem; /* Taille réduite pour le titre */
     }
-
     h3 {
         font-size: 1.5rem;
     }
-
     p {
         font-size: 1rem; /* Texte légèrement plus petit */
     }
-    
 }
-
 /* Mise en page pour très petits écrans */
 @media screen and (max-width: 480px) {
     .quote-box {
         padding: 20px;
     }
-
     .boxed {
         padding: 30px; /* Réduction du padding global */
 
     }
-
     h2 {
         font-size: 1.8rem;
     }
-
     p {
         font-size: 0.9rem;
     }
-    
 }
 
-/*------------------------------------------------------------------------------------*/
-/*--------------------------SKILLS-----------------------*/
+/*-----------------------------------------------SKILLS-----------------------------------------------------------*/
 /* Section Compétences */
 #competences {
     padding: 80px 20px; /* Espacement interne */
@@ -643,8 +548,6 @@ ul{
         opacity: 1;
     }
 }
-
-
 /* Boîte des compétences */
 .boxed-skills {
     max-width: 1280px;
@@ -659,7 +562,6 @@ ul{
     position: relative;
     animation: slideIn 1s ease-out; /* Apparition avec glissement */
 }
-
 /* Conteneur des compétences */
 .skills-container {
     display: flex;
@@ -670,7 +572,6 @@ ul{
     padding-bottom: 20px; /* Ajout d'espace sous les compétences */
     animation: fadeIn 1.2s ease-out; /* Apparition avec fondu */
 }
-
 /* Compétence individuelle */
 .skill {
     flex: 0 0 auto; /* Fixe la taille des compétences */
@@ -724,8 +625,6 @@ ul{
 .skill:hover img {
     transform: rotate(360deg); /* Rotation complète */
 }
-    
-
 /* Titre de la compétence */
 .skill h3 {
     font-size: 1rem;
@@ -746,7 +645,6 @@ ul{
     .boxed-skills {
         padding: 30px; /* Réduction de l'espace interne */
     }
-
     .skills-container {
         justify-content: start; /* Aligne les compétences au début pour faciliter le défilement */
     }
@@ -755,18 +653,15 @@ ul{
         width: 60px;
         height: 60px;
     }
-
     .skill h3 {
         font-size: 0.9rem;
     }
 }
-
 /* Mise en page pour très petits écrans */
 @media screen and (max-width: 480px) {
     .boxed-skills {
         padding: 20px;
     }
-
     .skill img {
         width: 50px;
         height: 50px;
@@ -777,18 +672,16 @@ ul{
     }
 }
 
-/*---------------------------PROJETs---------------------------------*/
+/*--------------------------------------------PROJETs-----------------------------------------------------------*/
 /* Section Projets */
 #projets {
     padding: 80px 20px; /* Espacement autour du contenu */
     margin-left: 250px; /* Espace pour le header vertical */
     transition: margin-left 0.3s ease; /* Transition douce pour la marge */
-    /*z-index: 1; /* Assure que le contenu reste au-dessus */
     box-sizing: border-box; /* Empêche les débordements */
     overflow:visible; 
     position: relative;
 }
-
 /* Disposition flexible pour les projets */
 .flex {
     display: flex;
@@ -800,7 +693,6 @@ ul{
     margin-bottom: 30px; /* Ajoute de l'espace en bas entre chaque projet */
    
 }
-
 /* Chaque projet occupe toute la largeur de la box */
 .projet-item {
     background-color: #333; /* Fond sombre */
@@ -826,7 +718,6 @@ ul{
     flex: 0 1 40%; /* L'image occupe 40% de la largeur */
     text-align: center; /* Centrer l'image */
 }
-
 /* Image du projet */
 .projet-image img {
     width: 100%; /* L'image prend toute la largeur disponible dans son conteneur */
@@ -835,7 +726,6 @@ ul{
     border-radius: 10px; /* Arrondir les coins de l'image */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ombre douce */
 }
-
 /* Titre du projet */
 .projet-item h3 {
     font-size: 2rem;
@@ -843,14 +733,12 @@ ul{
     margin-bottom: 10px;
     color:#6600cc;
 }
-
 /* Description du projet */
 .projet-item p {
     font-size: 1rem;
     color: #bbb;
     margin-bottom: 15px;
 }
-
 /* Bouton du projet */
 .projet-item .btn {
     padding: 10px 20px;
@@ -860,7 +748,6 @@ ul{
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
 .projet-item .btn:hover {
     background-color: #aa1fe665;
 }
@@ -870,7 +757,6 @@ ul{
         margin-left: 0; /* Supprimer la marge gauche */
         padding: 60px 20px; /* Ajuste le padding sur les écrans moyens */
     }
-
     .contact-box {
         flex-direction: column; /* Empile les sections verticalement */
         align-items: center;
@@ -879,7 +765,6 @@ ul{
         padding: 30px;
         margin-left: 0; /* Evite le décalage de la boîte */
     }
-
     .contact-details,
     .contact-message {
         width: 100%; /* Utilise toute la largeur pour chaque section */
@@ -889,32 +774,25 @@ ul{
         visibility: visible; /* Assurez-vous qu'ils sont visibles */
         opacity: 1;
         position: relative; /* Pour que z-index fonctionne */
-        /*z-index: 10;*/
     }
-
     .contact-form input,
     .contact-form textarea {
         font-size: 1rem; /* Ajuste la taille du texte pour plus de lisibilité */
     }
-
     .contact-form button {
         font-size: 1.1rem; /* Taille du bouton ajustée */
     }
-
     .social-icons {
         bottom: 15px;
         right: 15px;
     }
 }
-
-
 /* Responsive : Tablettes et petits écrans */
 @media screen and (max-width: 768px) {
     #projets {
         margin-left: 0; /* Supprime l'espace réservé au header */
         padding: 60px 10px; /* Ajuste le padding */
     }
-
     .flex {
         flex-direction: column; /* Empile les éléments verticalement */
         align-items: center; /* Centre les éléments */
@@ -926,59 +804,47 @@ ul{
         margin-bottom: 20px;
         padding: 30px;
     }
-
     .projet-item {
         flex-direction: column; /* Les projets sont empilés verticalement */
         align-items: center; /* Centre les éléments */
         width: 90%; /* Chaque projet occupe 90% de la largeur */
         margin-bottom: 20px; /* Espacement entre les projets */
     }
-
     .projet-image img {
         width: 70%; /* Réduit la taille de l'image */
         margin-top: 20px; /* Ajoute un peu d'espace au-dessus de l'image */
     }
-
     .projet-item h3 {
         font-size: 1.6rem; /* Réduit la taille des titres */
     }
-
     .projet-item p {
         font-size: 1rem; /* Réduit la taille de la description */
     }
-
     .projet-item .btn {
         width: 100%; /* Le bouton prend toute la largeur */
     }
 }
-
 /* Réglages pour très petits écrans */
 @media screen and (max-width: 480px) {
     .projet-image img {
         width: 100%; /* L'image prend toute la largeur */
     }
-
     .projet-item {
         width: 100%; /* Le projet occupe 100% de la largeur */
     }
-
     .projet-item h3 {
         font-size: 1.4rem; /* Réduction de la taille du titre */
     }
-
     .projet-item p {
         font-size: 0.9rem;
     }
 }
-
-
 /*----------------------------Formulaire----------------------------------------------------*/
 /* Section Contact */
 #contact {
     padding: 80px 20px;
     margin-left: 250px;
     transition: margin-left 0.3s ease;
-    /*z-index: 1;*/
     box-sizing: border-box;
     overflow:visible;
     display: flex;
@@ -999,21 +865,18 @@ ul{
     display: flex;
     justify-content: space-between; /* Répartition 50/50 */
 }
-
 /* Section gauche : Message */
 .contact-message {
     flex: 1 1 50%; /* Prend 50% de la largeur */
     text-align: left;
     padding-right: 20px;
 }
-
 /* Section droite : Formulaire */
 .contact-details {
     flex: 1 1 50%; /* Prend 50% de la largeur */
     text-align: left;
     padding-left: 20px;
 }
-
 /* Champ du formulaire */
 .contact-form input,
 .contact-form textarea {
@@ -1029,7 +892,6 @@ ul{
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.7);
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
-
 /* Effet focus pour les champs */
 .contact-form input:focus,
 .contact-form textarea:focus {
@@ -1037,7 +899,6 @@ ul{
     transform: scale(1.02);
     box-shadow: 0 0 8px #007bff;
 }
-
 /* Bouton d'envoi */
 .contact-form button {
     padding: 10px 20px;
@@ -1050,14 +911,11 @@ ul{
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
     box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
-    /*z-index: 10;*/
 }
-
 .contact-form button:hover {
     transform: translateY(-3px);
     background: linear-gradient(90deg, #0056b3, #003d7a);
 }
-
 /* Liens vers les réseaux sociaux */
 .social-icons {
     margin-top: 20px;
@@ -1066,25 +924,21 @@ ul{
     justify-content: center;
     position: relative;
 }
-
 .social-icons a {
     color: #6600cc;
     font-size: 2rem;
     transition: transform 0.3s ease, color 0.3s ease; 
 }
-
 .social-icons a:hover {
     color: #620bdc;
     transform: scale(1.2);
 }
-
 /* Mise en page mobile */
 @media screen and (max-width: 768px) {
     #contact {
         margin-left: 0;
         padding: 60px 10px;
     }
-
     .contact-box {
         flex-direction: column; /* Empile les sections verticalement */
         align-items: center;
@@ -1092,40 +946,34 @@ ul{
         margin-bottom: 20px;
         padding: 30px;
     }
-
     .contact-details,
     .contact-message {
         width: 100%;
         text-align: center;
         padding: 0;
     }
-
     .social-icons {
         bottom: 15px;
         right: 15px;
     }
 }
-
 /* Très petits écrans */
 @media screen and (max-width: 480px) {
     .contact-box {
         width: 100%;
         padding: 20px;
     }
-
     .contact-form input, .contact-form textarea {
         font-size: 0.9rem;
     }
-
     .contact-form button {
         font-size: 1rem;
     }
-
     .social-icons a {
         font-size: 1.5rem;
     }
 }
-/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------*/
 /* Footer global */
 footer {
     background-color: #000;
@@ -1133,42 +981,34 @@ footer {
     padding: 20px 60px;
     font-size: 0.9rem;
     text-align: center; /* Centre le texte dans le footer */
-   
     bottom: 0;          /* Place le footer au bas */
     width: 100%;        /* Prend toute la largeur de la page */
     left: 0;            /* Assure qu'il s'étend sur toute la largeur */
-    /*z-index: 999;       /* Assure que le footer soit au-dessus des autres éléments */
     border: 5px solid #fff;
     overflow: hidden;
 }
-
 /* Style pour les informations légales */
 .legal-info p {
     margin: 5px 0;
     font-size: 0.9rem;
 }
-
 .legal-info a {
     color: #750ae7;
     text-decoration: none;
     transition: color 0.3s;
 }
-
 .legal-info a:hover {
     color: #3f3398;
 }
-
 /* Styles Responsifs */
 @media (max-width: 768px) {
     footer {
         font-size: 0.8rem;  /* Réduit la taille du texte sur petits écrans */
         padding: 15px 0;    /* Réduit le padding pour les petits écrans */
     }
-
     .legal-info p {
         margin: 5px 0;
     }
-
     .legal-info a {
         font-size: 0.9rem; /* Réduit la taille des liens sur petits écrans */
     }
