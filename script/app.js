@@ -8,8 +8,7 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 
 });
-
-
+//-----------------------------------une alert pour le formulaire----------------------------//
 function showAlert(event) {
     event.preventDefault();  // Empêche l'envoi du formulaire pour éviter de recharger la page
 
@@ -62,7 +61,7 @@ document.getElementById("envoyer").addEventListener("click", (event) => {
     client.presentation();
 });
 
-//bouton dark
+//------------------------------------------------bouton dark--------------------------------------------------//
 function toggleBackground() {
     const body = document.body;
     const button = document.querySelector('.toggle-btn');
