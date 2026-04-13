@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Logo">
+            <!--<img src="images/logo.png" alt="Logo">-->
         </div>
         
         <div class="name">
@@ -30,7 +30,7 @@
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
-        <button class="toggle-btn light-mode" onclick="toggleBackground()">Dark Mode🌙</button>
+        <button class="toggle-btn dark-mode" onclick="toggleBackground()">Light Mode ☀️</button>
     
         <!-- Menu Hamburger -->
         <div class="hamburger" id="hamburger">
@@ -46,6 +46,7 @@
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#apropos">À propos de moi</a></li>
                 <li><a href="#competences">Compétences</a></li>
+                <li><a href="#experiences">Expériences</a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -55,18 +56,18 @@
     <main>
     <!-- *******************************Accueil****************************************************-->
     <section id="accueil" class="section">
-        <div class="boxed text-center accueil-box">
+        <div class="boxed text-center accueil-box reveal">
             <div class="flex">
                 <!-- Section gauche avec prénom, nom, métier et contact -->
                 <div class="w60 text-left">
                     <h1 class="full-name">Assia Younsi</h1>
                     <p class="job-title">Développeuse Informatique</p>
-                    <p class="tagline">"Actuellement étudiant en Licence 3 Informatique à Sorbonne Université et apprenti en Développement et Digitalisation chez LUXIUM SOLUTIONS, je place la curiosité et l'innovation au cœur de mon parcours. Passionné par l'évolution technologique, je maîtrise un large éventail d'outils allant du développement (Symfony, JavaScript, Python, Java) à la programmation système (C, Bash).</p>
-                    <p>Motivé par l'apprentissage continu, je prépare activement mon Master et recherche une nouvelle alternance. Mon objectif est d'élargir mes horizons techniques vers des domaines stratégiques tels que la Data, les Systèmes d'Information, l'Infrastructure et le Cloud.</p>
+                    <p class="tagline">Actuellement étudiante en Licence 3 Informatique à Sorbonne Université et apprentie Développeuse d'Applications chez LUXIUM SOLUTIONS.</p>
+                    <p>Motivé par l'apprentissage continu, je prépare activement mon Master et je recherche une nouvelle alternance pour deux ans (bac+4/5) à partir de septembre 2026.</p>
                     <!-- Bouton d'appel à l'action -->
                     <div class="cta-buttons">
                         <a href="#projets" class="btn-primary" aria-label="voir mes projets">Voir mes projets</a>
-                        <a href="https://drive.google.com/file/d/1Pf-PlHLi2vspH8Kif1BhFSP5AWyzU4uF/view?usp=sharing" target="_blank" download class="btn-primary" aria-label="">Télécharger mon CV ↗️</a>
+                        <a href="https://drive.google.com/file/d/18ibZdsTDbSd45Jsj7a05P2qMWFy13lyP/view?usp=sharing" target="_blank" download class="btn-primary" aria-label="">Télécharger mon CV ↗️</a>
                     </div>
 
                      <!-- Icônes sociales et contact -->
@@ -87,74 +88,102 @@
     
     <!-- ******************A propos*************************-->
     <section id="apropos" class="section">
-        <div class="boxed">
-            <div class="flex">
-                <!-- Partie gauche avec texte, bouton, et citation -->
-               <div class="w50 text-left">
-                <h2>À propos de moi</h2>
-                <p>
-                    Actuellement étudiant en <strong>Licence 3 Informatique à Sorbonne Université</strong> et développeur en alternance chez <strong>LUXIUM SOLUTIONS</strong>, j'évolue au cœur des enjeux de la digitalisation. Mon quotidien ? Allier la rigueur académique à la réalité du terrain pour concevoir des solutions numériques performantes.
-                </p>
+        <div class="boxed reveal">
+            <!-- Présentation texte complet -->
+            <div class="presentation-section text-left">
+                <h2 class="text-center">À propos de moi</h2>
+            </div>
 
-                <p>
-                    Polyvalent par nature, je navigue entre le développement web moderne (JS, Symfony, SQL, React) et la programmation bas niveau ou fonctionnelle (C, Java, OCaml, Bash). Cette diversité technique me permet d'aborder chaque problème avec une vision globale, de l'algorithmique pure à l'interface utilisateur.
-                </p>
-
-                <p>
-                    Passionné par l'innovation, je prépare mon entrée en Master avec l'ambition de me spécialiser dans les domaines de la <strong>Data, du Cloud et des infrastructures</strong>. Ma philosophie est simple : transformer la complexité en solutions robustes et créatives, une ligne de code après l'autre.
-                </p>
-
-                <div class="quote-box">
-                    <p><strong>“Apprendre, coder et résoudre : transformer chaque défi en opportunité.”</strong></p>
+            <!-- Parcours Académique (Cartes) -->
+            <div class="formations-section mt-40">
+                <h3 class="text-center"><i class="fas fa-graduation-cap"></i> Mon Parcours & Formations</h3>
+                <div class="formations-grid">
+                    <div class="formation-card">
+                        <div class="formation-header">
+                            <h4>Licence 3 Informatique</h4>
+                            <span>2025 - 2026 | Sorbonne Université</span>
+                        </div>
+                        <p class="formation-desc">Modules principaux :</p>
+                        <div class="tags">
+                            <span class="tag">Réseau</span><span class="tag">Prog. Concurrente</span><span class="tag">Data Science</span><span class="tag">Machine Learning</span><span class="tag">Algorithmique</span><span class="tag">POO Java Avancé</span><span class="tag">Génie Logiciel</span><span class="tag">Probabilité</span><span class="tag">Gestion de projet</span><span class="tag">Entrepreneuriat</span>
+                        </div>
+                    </div>
+                    <div class="formation-card">
+                        <div class="formation-header">
+                            <h4>Licence 2 Informatique</h4>
+                            <span>2024 - 2025 | Sorbonne Université</span>
+                        </div>
+                        <p class="formation-desc">Modules principaux :</p>
+                        <div class="tags">
+                            <span class="tag">Système d'exploitation</span><span class="tag">Base de données</span><span class="tag">C Avancé</span><span class="tag">Prog. Fonctionnelle</span><span class="tag">Structure de données</span><span class="tag">Théorie des graphes</span><span class="tag">Développement Web</span><span class="tag">Maths discrètes</span>
+                        </div>
+                    </div>
+                    <div class="formation-card">
+                        <div class="formation-header">
+                            <h4>Licence 1 Informatique</h4>
+                            <span>2023 - 2024 | Sorbonne Université</span>
+                        </div>
+                        <p class="formation-desc">Modules principaux :</p>
+                        <div class="tags">
+                            <span class="tag">Prog. Python</span><span class="tag">Prog. C</span><span class="tag">Science des données</span><span class="tag">Physique</span>
+                        </div>
+                    </div>
+                    <div class="formation-card">
+                        <div class="formation-header">
+                            <h4>CPGE (Classes Prépa.)</h4>
+                            <span>2022 - 2023 | École Nat. Polytechnique</span>
+                        </div>
+                        <p class="formation-desc">Modules principaux :</p>
+                        <div class="tags">
+                            <span class="tag">Électronique</span><span class="tag">Électrique</span><span class="tag">Chimie</span><span class="tag">Algorithmique</span><span class="tag">Informatique</span><span class="tag">CAO</span><span class="tag">Dessin technique</span><span class="tag">Analyse</span><span class="tag">Algèbre</span><span class="tag">Mécanique</span><span class="tag">Physique</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-    
-                <!-- Partie droite avec description de vous -->
-                <div class="w50 text-left">
-                    <h3>🎓 Formations</h3>
-                    <div class="formation-item">
-                        <p><strong>Licence 3 Informatique (Parcours DANT)</strong><br>
-                        Sorbonne Université | 2025 - 2026</p>
-                        
-                        <p><strong>Licence 2 Informatique (Parcours DANT)</strong><br>
-                        Sorbonne Université | 2024 - 2025</p>
-                        
-                        <p><strong>Licence 1 Informatique</strong><br>
-                        Sorbonne Université | 2023 - 2024</p>
-                        
-                        <p><strong>Classes Préparatoires aux Grandes Écoles (CPGE)</strong><br>
-                        École Nationale Polytechnique | 2022 - 2023</p>
-                    </div>
 
-                    <hr> <h3>✨ Centres d'intérêt</h3>
-                    <ul class="interests-list">
-                        <li><strong>Sport :</strong> Volleyball & Running</li>
-                        <li><strong>Arts :</strong> Photographie & Dessin</li>
-                        <li><strong>Engagement :</strong> Vie associative & Bénévolat</li>
-                    </ul>
-                </div>
+            <!-- Centres d'intérêt -->
+            <div class="interests-section mt-40">
+                <h3 class="text-center"><i class="fas fa-heart"></i> Centres d'intérêt</h3>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <i class="fas fa-running"></i>
+                        <span>Volleyball & Running</span>
+                    </div>
+                    <div class="interest-card">
+                        <i class="fas fa-palette"></i>
+                        <span>Photographie & Dessin</span>
+                    </div>
+                    <div class="interest-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Vie Associative & Bénévolat</span>
+                    </div>
+            </div>
+
+            <div class="quote-box">
+                <p><strong>“Apprendre, coder et résoudre : transformer chaque défi en opportunité.”</strong></p>
             </div>
         </div>
     </section>
     <!--***************************Experiences****************************-->
-    <section id="projets" class="section">
-        <div class="boxed">
+    <section id="experiences" class="section">
+        <div class="boxed reveal">
             <h2 class="text-center">Expériences Professionnelles</h2>
 
-            <div class="flex projet-item" onclick="toggleLight(this)">
+            <div class="flex projet-item reveal">
                 <div class="w60 projet-details">
                     <div class="projet-content">
-                        <h3>DÉVELOPPEUSE INFORMATIQUE ET DIGITALISATION - ALTERNANTE</h3>
+                        <h3>DÉVELOPPEUSE INFORMATIQUE ET DIGITALISATION - ALTERNANCE</h3>
                         <p><strong>LUXIUM SOLUTIONS (EX-SAINT GOBAIN)</strong> | NEMOURS, PARIS</p>
                         <p><strong>Période :</strong> 09/2025 – 09/2026</p>
                         <ul>
+                            <li><strong>Analyse & Spécifications :</strong> Recueil et analyse des besoins des équipes opérationnelles pour traduire les problématiques métiers en spécifications techniques.</li>
                             <li><strong>Conception & Design :</strong> Création de maquettes UI/UX avec Figma et modélisation de bases de données avec Lucidchart.</li>
                             <li><strong>Développement Fullstack :</strong> Utilisation avancée du framework Symfony pour le back-end et gestion des fonctionnalités applicatives complexes en PHP.</li>
                             <li><strong>Intégration Front-end :</strong> Développement d'interfaces modernes avec Twig, JavaScript, JQuery et Bootstrap.</li>
                             <li><strong>Optimisation :</strong> Analyse et amélioration des processus existants pour accroître l'efficacité des outils numériques.</li>
                             <li><strong>Collaboration :</strong> Travail en équipe avec gestion du versioning via Git et méthodologies agiles.</li>
                         </ul>
-                        <p><strong>Environnement technique :</strong> Symfony, Twig, PHP, MySQL, JavaScript, JQuery, Figma, Lucidchart</p>
+                        <p><strong>Environnement technique :</strong> Symfony, Twig, PHP, MySQL, JavaScript, JQuery, Figma, Lucidchart, Power BI, Plotly.js</p>
                     </div>
                 </div>
                 <div class="w40 projet-image">
@@ -162,7 +191,7 @@
                 </div>
             </div>
 
-            <div class="flex projet-item" onclick="toggleLight(this)">
+            <div class="flex projet-item reveal">
                 <div class="w60 projet-details">
                     <div class="projet-content">
                         <h3>DÉVELOPPEUSE INFORMATIQUE ET DIGITALISATION - STAGE</h3>
@@ -170,6 +199,7 @@
                         <p><strong>Période :</strong> 03/2025 – 09/2025</p>
                         <ul>
                             <li>Digitalisation des processus métiers internes via le développement d'applications web dédiées.</li>
+                            <li>Automatisation des tâches internes à l’aide de scripts.</li>
                             <li>Implémentation de requêtes SQL complexes et optimisation des flux de données inter-tables.</li>
                             <li>Réorganisation structurelle de la base de données pour améliorer les performances.</li>
                             <li>Développement d'interfaces dynamiques en PHP (Smarty) et JavaScript.</li>
@@ -186,56 +216,63 @@
     </section>
     <!-- *******************COMPETANCES***************************-->
     <section id="competences" class="section ">
-        <div class="boxed-skills">
+        <div class="boxed-skills reveal">
             <h2> Mes compétences</h2>
-            <div class="skills-container">
-                <!-- Compétence 1 -->
-                <div class="skill">
-                    <img src="images/python.png" alt="Python">
-                    <h3>Python</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Langages de programmation</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span><span class="tag">Java</span><span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">C</span><span class="tag">JavaScript</span><span class="tag">OCaml</span><span class="tag">Bash</span><span class="tag">JSON</span>
+                    </div>
                 </div>
                 
-                <!-- Compétence 2 -->
-                <div class="skill">
-                    <img src="images/java.png" alt="Java">
-                    <h3>Java</h3>
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Développement web</h3>
+                    <div class="tags">
+                        <span class="tag">Spring Boot</span><span class="tag">PHP</span><span class="tag">Symfony</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">ReactJs</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span>
+                    </div>
                 </div>
                 
-                <!-- Compétence 5 -->
-                <div class="skill">
-                    <img src="images/java-script.png" alt="JavaScript">
-                    <h3>JavaScript</h3>
-                </div>
-
-                
-                <!-- Compétence 7 -->
-                <div class="skill">
-                    <img src="images/c.png" alt="C">
-                    <h3>C</h3>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Logiciels et outils</h3>
+                    <div class="tags">
+                        <span class="tag">Unix/Linux</span><span class="tag">Git</span><span class="tag">Bash</span><span class="tag">Docker</span><span class="tag">PowerShell</span><span class="tag">Pipeline CI/CD</span><span class="tag">MySQL</span><span class="tag">NoSQL</span><span class="tag">phpMyAdmin</span><span class="tag">Modelio(UML, reverse engineering)</span><span class="tag">VsCode</span><span class="tag">Intellij</span>
+                    </div>
                 </div>
                 
-                <!-- Compétence 8 -->
-                <div class="skill">
-                    <img src="images/mysql.png" alt="MySQL">
-                    <h3>MySQL</h3>
-                </div>
-
-                <!-- Compétence 9 -->
-                <div class="skill">
-                    <img src="images/php.png" alt="MySQL">
-                    <h3>PHP</h3>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-pie"></i> Data & Analyse</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span><span class="tag">IA (Notions)</span><span class="tag">Numpy</span><span class="tag">Pandas</span><span class="tag">Hadoop</span><span class="tag">Machine Learning</span><span class="tag">Map Reduce</span>
+                    </div>
                 </div>
                 
-                <!-- Compétence 9 -->
-                <div class="skill">
-                    <img src="images/gnu-bash.png" alt="Bash">
-                    <h3>Bash</h3>
+                <div class="skill-category">
+                    <h3><i class="fas fa-network-wired"></i> Réseau et protocoles</h3>
+                    <div class="tags">
+                        <span class="tag">DHCP</span><span class="tag">TCP/IP</span><span class="tag">UDP</span><span class="tag">STP</span><span class="tag">ARP</span><span class="tag">ICMP</span><span class="tag">RIP</span><span class="tag">Wireshark</span>
+                    </div>
                 </div>
                 
-                <!-- Compétence 10 -->
-                <div class="skill">
-                    <img src="images/ocaml.png" alt="OCaml">
-                    <h3>OCaml</h3>
+                <div class="skill-category">
+                    <h3><i class="fas fa-microchip"></i> Concepts systèmes</h3>
+                    <div class="tags">
+                        <span class="tag">Scripting</span><span class="tag">Sémaphores</span><span class="tag">Multithreading</span><span class="tag">Verrous</span><span class="tag">Concurrence et parallélisme</span><span class="tag">CPU</span><span class="tag">Mémoire</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-sitemap"></i> Architecture & Conception</h3>
+                    <div class="tags">
+                        <span class="tag">Design Patterns</span><span class="tag">API REST</span><span class="tag">MVC</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> Soft skills</h3>
+                    <div class="tags">
+                        <span class="tag">Autonomie</span><span class="tag">Communication</span><span class="tag">Agilité</span><span class="tag">Esprit d'équipe</span><span class="tag">Gestion de projet</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -246,9 +283,61 @@
     <section id="projets" class="section">
         <div class="boxed">
             <h2 class="text-center">Mes Projets</h2>
+
+            <!-- Projet 1 -->
+            <div class="flex projet-item reveal">
+                <div class="w60 projet-details"> <div class="projet-content">
+                        <h3>Analyse et Modélisation des Taxis Jaunes de New York</h3>
+                        <ul>
+                            <li>Analyse exploratoire et nettoyage d'un jeu de données réel (> 100 000 trajets).</li>
+                            <li>Feature Engineering : extraction de variables temporelles, encodage cyclique, calcul de métriques dérivées (durée, vitesse moyenne).</li>
+                            <li>Modélisation supervisée (Random Forest, Régression) et non supervisée (K-Means, DBSCAN) avec évaluation rigoureuse des performances.</li>
+                        </ul>
+                        <p><strong>Environnement technique :</strong> Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn.e</p>
+                        <a href="https://github.com/Assia-ys/NYC-Taxi-Data-Analysis" target="_blank" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+                <div class="w40 projet-image" style="max-width: 350px; margin: auto;"> <img src="images/NYC.png" alt="Aperçu du jeu QOMET" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+
+            <!-- Projet 1 -->
+            <div class="flex projet-item reveal">
+                <div class="w60 projet-details"> <div class="projet-content">
+                        <h3>Moteur de données haute performance</h3>
+                        <ul>
+                            <li>Développement d’un moteur de données haute performance en Java (services).</li>
+                            <li>Ingestion, stockage et requêtage de données CSV/Parquet avec opérations type SQL.</li>
+                            <li>Optimisation des performances sur des jeux de données massifs (> 4M de lignes).</li>
+                        </ul>
+                        <p><strong>Environnement technique :</strong> Spring boot, Java, Maeven, Rest, Kaggle</p>
+                        <a href="https://github.com/maissa-saci/FastBase" target="_blank" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+                <div class="w40 projet-image" style="max-width: 350px; margin: auto;"> <img src="images/perf.png" alt="Aperçu du jeu QOMET" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+
+            <!-- Projet 1 -->
+            <div class="flex projet-item reveal">
+                <div class="w60 projet-details"> <div class="projet-content">
+                        <h3>Développement d’un jeu - QOMET</h3>
+                        <ul>
+                            <li><strong>Moteur de Jeu & IA :</strong> Développement d'une logique de plateau en 2D avec implémentation d'un algorithme permettant un mode joueur contre ordinateur performant.</li>
+                            <li><strong>Architecture Temps Réel :</strong> Utilisation de <strong>WebSockets</strong> pour assurer une synchronisation instantanée des coups entre le front-end et le back-end.</li>
+                            <li><strong>Interface Moderne :</strong> Conception d'une UI réactive avec React.js, offrant une expérience utilisateur fluide et immersive.</li>
+                            <li><strong>API robuste :</strong> Mise en place d'un back-end avec FastAPI pour une gestion optimisée des requêtes et de l'état du jeu.</li>
+                        </ul>
+                        <p><strong>Environnement technique :</strong> Python, React.js, WebSocket, FastAPI, Git </p>
+                        <a href="https://github.com/Assia-ys/QOMET" target="_blank" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+                <div class="w40 projet-image" style="max-width: 350px; margin: auto;"> <img src="images/qomet.jpg" alt="Aperçu du jeu QOMET" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                </div>
+            </div>
     
             <!-- Projet 1 -->
-            <div class="flex projet-item" onclick="toggleLight(this)">
+            <div class="flex projet-item reveal">
                 <div class="w60 projet-details">
                     <div class="projet-content">
                         <h3>CRÉATION D'UN AUTOMATE EN PYTHON</h3>
@@ -267,7 +356,7 @@
             </div>
     
             <!-- Projet 2 -->
-            <div class="flex projet-item" onclick="toggleLight(this)">
+            <div class="flex projet-item reveal">
                 <div class="w60 projet-details">
                     <div class="projet-content">
                         <h3>SIMULATION D'ÉCOSYSTÈME EN C</h3>
@@ -286,7 +375,7 @@
             </div>
     
             <!-- Projet 3 -->
-            <div class="flex projet-item" onclick="toggleLight(this)">
+            <div class="flex projet-item reveal">
                 <div class="w60 projet-details">
                     <div class="projet-content">
                         <h3>ANALYSE DE DONNÉES D'UN CYCLISTE EN PYTHON</h3>
@@ -307,8 +396,8 @@
     
     <!-- *********************************Formulaire*************************-->
     <section id="contact" class="section">
-        <div class="boxed contact-box">
-            <div class="flex projet-item" onclick="toggleLight(this)">
+        <div class="boxed contact-box reveal">
+            <div class="flex projet-item">
                 <div class="w60 projet-details">
                     <h2 class="contact-title">Contactez-moi</h2>
     
@@ -321,7 +410,10 @@
                 <div class="w40 projet-image">
                 <!-- Section droite : Formulaire -->
                 <div class="contact-details">
-                    <form id="contactForm" action="contact_form.php" method="post" class="contact-form">
+                    <form id="contactForm" action="https://formsubmit.co/assiayounsi5@gmail.com" method="POST" class="contact-form">
+                        <!-- Sujet de l'e-mail que tu vas recevoir -->
+                        <input type="hidden" name="_subject" value="Nouveau message depuis ton Portfolio !">
+                        
                         <div class="form-group">
                             <label for="name">Nom</label>
                             <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
@@ -357,18 +449,18 @@
             </div>
         </div>
     </section>
-    </main>
-<script src="script/app.js"></script>
-
-</body>
 
     <footer>
         <div class="legal-info text-center">
-            <p>© 2026 Assia YOUNSI. Tous droits réservés.</p>
+            <p>© 2024-2026 Assia YOUNSI. Tous droits réservés.</p>
             <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
         </div>
     </footer>
 
+    </main>
+<script src="script/app.js"></script>
+
+</body>
 
 </html>
 
